@@ -408,13 +408,16 @@ header h1{
     display: block;
 }
 .Readmore{
-    color: var(--verde--);
     border: none;
-    background-color: white;
+    background-color: var(--verde--);
+    color: var(--blanco--);
     height: 2rem;
     width: 6rem;
     margin: 0 auto;
     cursor: pointer;
+    margin: 0 auto;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 /*=====Section Demo=====*/
 .Demo{
@@ -519,114 +522,193 @@ footer li,ul{
 .mails input::placeholder{
     color: var(--blanco--);
 }
-/*=====Responsive======*/
-@media (max-width: 400px) {
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 480px) {
+
+    body {
+        overflow-x: hidden;
+    }
     header {
-        position: relative;
-        text-align: center;
-        width: 100%;
-
-    }
-
-    ul{
-        display: flex;
         flex-direction: column;
-
-    }
-    header img {
-        width: 70px;
-        height: 70px;
-    }
-
-    h1 {
-        font-size: 22px;
-        margin-top: 5px;
-    }
-
-    
-    nav {
-        flex-direction: column;
-        width: 100%;
         align-items: center;
-        gap: 8px;
-    }
-
-    nav li a {
-        width: 90%;
-        text-align: center;
-        padding: 10px;
-    }
-
-
-    nav li a {
-        width: 100%;
-        text-align: center;
-    }
-
- 
-    section {
-        width: 95%;
         padding: 15px;
+        gap: 10px;
+        text-align: center;
+        border: none;
+        box-shadow: none;
+    }
+    .logo {
+        width: 70px;
     }
 
-  
-    .main3,.cards,.celd-cards,.cards3{
-        width: 95%;
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* Cards se adaptan al ancho */
-    .main3,.cards,.celd-cards,.cards3 {
-        width: 90%;
-        margin: auto;
-        height: auto;
-        margin: 0 auto;
-    }
-
-    .main3,.cards,.celd-cards,.cards3 img {
-        width: 100%;
-        height: auto;
+    header h1 {
+        font-size: 22px;
         margin: 0;
     }
 
-    .main3,.cards,.celd-cards,.cards3 {
+    ul {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        gap: 10px;
+    }
+
+    .log {
+        margin: 0;
+        justify-content: center;
+    }
+    .content-main,
+    .main2,
+    .main3 {
+        flex-direction: column;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .main-cont,
+    .main-cont2,
+    .main-cont3,
+    .cont-character,
+    .cont-character2,
+    .cont-character3 {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .main-txt,
+    .main-txt2,
+    .main-txt3 {
+        font-size: 32px;
+    }
+    .clients h2 {
+        font-size: 36px;
+    }
+
+    .clients p {
+        font-size: 18px;
+    }
+
+    .content-imgclients,
+    .content-imgclients3 {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .cards,
+    .cards3 {
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
+
+    .card,
+    .card3 {
+        width: 100%;
+        transform: none;
+    }
+
+    .card:hover,
+    .card3:hover {
+        transform: none;
+    }
+    .celds {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    .txt-celd,
+    .celd-cards {
+        width: 100%;
+        margin: 0;
+    }
+
+    .celds h2,
+    .celds h3,
+    .celds p {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .celd-cards {
         grid-template-columns: 1fr;
     }
-
-
-    p, label {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 800px){
-    header{
-        width: 100%;
-        height: 150px;
-        gap: 10px;
-        position: relative;
-    }
-    ul{
-        padding: 1rem;
-        display: flex;
+    .foot {
         flex-direction: column;
-        margin-top: 0;   
+        text-align: center;
+        gap: 20px;
     }
-    .main3,.cards,.celd-cards,.cards3{
-        grid-template-columns: repeat(2, 1fr);
-        padding-left: 0 ;
-        gap: 6px;
+
+    .reds {
+        justify-content: center;
+        margin-left: 0;
     }
-    .main3,.cards,.celd-cards,.cards3{
-        margin: 0 auto  ;
-        width: 300px;
-        height: 300px;
-    }
-    .main3,.cards,.celd-cards,.cards3 img{
-    width: 250px;
-    height: 150px;        
+
+    .mails input {
+        width: 90%;
     }
 }
+@media (min-width: 481px) and (max-width: 768px) {
 
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .content-main,
+    .main2 {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .main-cont,
+    .main-cont2,
+    .cont-character,
+    .cont-character2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cards,
+    .cards3 {
+        grid-template-columns: repeat(2, 1fr);
+        width: 95%;
+    }
+
+    .celds {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .txt-celd,
+    .celd-cards {
+        width: 100%;
+    }
+
+    .celd-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .foot {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .content-main,
+    .main2 {
+        width: 95%;
+    }
+
+    .cards,
+    .cards3 {
+        width: 90%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .celd-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
