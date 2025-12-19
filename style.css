@@ -289,6 +289,7 @@ header h1{
     display: flex;
     flex-direction: row;
     gap: 15px;
+    margin-bottom: 30px;
 }
 .card2 p{
     margin: 0 2rem 1rem;
@@ -472,6 +473,8 @@ footer h2{
 .red{
     width: 25px;
     height: 25px;
+    margin-left: 2rem;
+    cursor: pointer;
 }
 .reds{
     display: flex;
@@ -479,7 +482,7 @@ footer h2{
     margin-top: 3rem;
     padding: 5px;
     gap: 10px;
-    margin-left: 3rem;
+    margin-left: 5px;
 }
 .company{
     display: flex;
